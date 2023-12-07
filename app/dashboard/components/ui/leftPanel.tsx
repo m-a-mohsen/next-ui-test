@@ -7,13 +7,10 @@ export default function LeftPanel() {
 
   return (
     <Accordion>
-      <AccordionItem key="1" aria-label="Accordion 1" title="Accordion 1">
+      <AccordionItem key="1" aria-label="achievements" title="Achievements">
         {defaultContent}
       </AccordionItem>
-      <AccordionItem key="2" aria-label="Accordion 2" title="Accordion 2">
-        {defaultContent}
-      </AccordionItem>
-      <AccordionItem key="3" aria-label="Accordion 3" title="Accordion 3">
+      <AccordionItem key="2" aria-label="Leader board" title="Leader Board">
         {defaultContent}
       </AccordionItem>
     </Accordion>

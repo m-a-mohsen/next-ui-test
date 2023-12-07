@@ -1,7 +1,7 @@
 import { button as buttonStyles } from "@nextui-org/theme";
 import { LogoutLink } from "@kinde-oss/kinde-auth-nextjs/components";
-import TremorShell from "./TremorMetrics";
-import LeftPanel from "./leftPanel";
+import TremorShell from "./components/charts/TremorMetrics";
+import LeftPanel from "./components/ui/leftPanel";
 
 export default function Dashboard() {
   return (
