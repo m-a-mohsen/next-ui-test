@@ -41,7 +41,7 @@ export default function RootLayout({
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
           <div className="relative flex flex-col h-screen">
             <Navbar />
-            <main>{children}</main>
+            <main className="flex grow h-screen">{children}</main>
             <footer className="w-full flex items-center justify-center py-3">
               <span className="text-default-600">
                 ©2023 Open Tech Camp. Made with 💙 in Berlin. By&nbsp;

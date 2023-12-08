@@ -13,18 +13,9 @@ import {
 
 export default function Home() {
   return (
-    <div className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
-      <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-        <div className="inline-block max-w-lg text-center justify-center">
-          {/* <Card className="max-w-xs mx-auto mb-4">
-      <Text>Sales</Text>
-      <Metric>$ 71,465</Metric>
-      <Flex className="mt-4">
-        <Text>32% of annual target</Text>
-        <Text>$ 225,000</Text>
-      </Flex>
-      <ProgressBar value={32} className="mt-2" />
-        </Card> */}
+      <section className="flex flex-col grow items-center justify-center gap-4 py-8 md:py-10">
+        <div className="inline-block max-w-lg text-center justify-center ">
+
           <h1 className={title()}>Deliver&nbsp;</h1>
           <h1 className={title({ color: "blue" })}>personalized&nbsp;</h1>
           <br />
@@ -67,6 +58,5 @@ export default function Home() {
           </Snippet>
         </div>
       </section>
-    </div>
   );
 }
