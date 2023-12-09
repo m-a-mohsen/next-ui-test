@@ -42,20 +42,21 @@ export default function UserNavbar() {
         />
       );
   return (
-    <Navbar className=" rounded-2xl" isBlurred={true}  >
+    <Navbar className=" rounded-2xl" isBlurred={true}>
       <NavbarContent justify="start">
         <NavbarContent className="hidden gap-3 sm:flex">
-          <NavbarItem isActive>
-            <Link
-              className=" text-2xl font-bold"
-              color="primary"
-              href="/dashboard"
-            >
+          <NavbarItem>
+            <Link color="foreground" href="/dashboard">
               Dashboard
             </Link>
           </NavbarItem>
-          <NavbarItem>
-            <Link href="/sessions" aria-current="page" color="foreground">
+          <NavbarItem isActive>
+            <Link
+              href="/sessions"
+              className="text-2xl font-bold"
+              color="primary"
+              aria-current="page"
+            >
               Sessions
             </Link>
           </NavbarItem>

@@ -147,7 +147,7 @@ export default function RightPanel() {
           </Link>
         }
         avatarProps={{
-          src: "https://i.pravatar.cc/150?img=3",
+          src: "https://i.pravatar.cc/150?img=58",
         }}
       />
     </div>
