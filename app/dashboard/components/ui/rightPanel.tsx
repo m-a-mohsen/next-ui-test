@@ -102,7 +102,7 @@ export default function RightPanel() {
           </Link>
         }
         avatarProps={{
-          src: "https://i.pravatar.cc/150?img=9",
+          src: "https://i.pravatar.cc/150?img=19",
         }}
       />
     </div>
@@ -112,7 +112,7 @@ export default function RightPanel() {
 
 //-------------------------------------------
 
-  const leaderBoard = (
+  const instructors = (
     <div className="pb-2">
       <User
         className="pb-2"
@@ -123,7 +123,7 @@ export default function RightPanel() {
           </Link>
         }
         avatarProps={{
-          src: "https://i.pravatar.cc/150?img=11",
+          src: "https://i.pravatar.cc/150?img=50",
         }}
       />
       <User
@@ -135,7 +135,7 @@ export default function RightPanel() {
           </Link>
         }
         avatarProps={{
-          src: "https://i.pravatar.cc/150?img=16",
+          src: "https://i.pravatar.cc/150?img=29",
         }}
       />
       <User
@@ -147,7 +147,7 @@ export default function RightPanel() {
           </Link>
         }
         avatarProps={{
-          src: "https://i.pravatar.cc/150?img=13",
+          src: "https://i.pravatar.cc/150?img=58",
         }}
       />
     </div>
@@ -159,7 +159,7 @@ export default function RightPanel() {
         {coStudents}
       </AccordionItem>
       <AccordionItem key="2" aria-label="Instructors" title="Instructors">
-        {leaderBoard}
+        {instructors}
       </AccordionItem>
     </Accordion>
   );

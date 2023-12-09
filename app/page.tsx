@@ -48,7 +48,7 @@ export default function Home() {
         </div>
         <div className="mt-8">
           <Snippet variant="bordered" size="sm">
-            npm install open-tech-camp
+            npx open-tech-camp
           </Snippet>
         </div>
       </section>

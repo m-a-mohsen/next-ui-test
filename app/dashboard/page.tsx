@@ -3,19 +3,29 @@ import { LogoutLink } from "@kinde-oss/kinde-auth-nextjs/components";
 import TremorShell from "./components/charts/TremorMetrics";
 import LeftPanel from "./components/ui/leftPanel";
 import RightPanel from "./components/ui/rightPanel";
+import LearningPoints from "./components/charts/learningpoints";
+import EngagementPoints from "./components/charts/engagementpoints";
+import MotivationPoints from "./components/charts/motivationpoints";
 
 export default function Dashboard() {
   return (
     // <div className="absolute z-20 top-20 inset-x-0 flex justify-center overflow-hidden pointer-events-none">
-    <div className="container flex mx-auto max-w-7xl px-6 h-screen">
+    <div className="container mx-auto flex h-screen max-w-7xl px-6">
       <div id="leftPanel" className=" basis-1/5  ">
-        <h2 className="text-xl text-center font-medium p-4">Achievements</h2>
+        <h2 className="p-4 text-center text-xl font-medium">Achievements</h2>
         <LeftPanel />
       </div>
-      <div id="centerPanel" className=" flex-grow ">
-        <TremorShell />
+      <div id="centerPanel" className="flex-grow">
+        {/* <TremorShell /> */}
+        <div className="grid gap-2 px-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
+          <LearningPoints />
+          <EngagementPoints />
+          <MotivationPoints />
+        </div>
       </div>
-      <div id="rightPanel" className="flex-col basis-1/5 ">
+      <div id="rightPanel" className="basis-1/5 flex-col ">
+        <h2 className="p-4 text-center text-xl font-medium">Widgets</h2>
+        <RightPanel />
         {/* <LogoutLink
               className={buttonStyles({
                 color: "danger",
@@ -26,9 +36,6 @@ export default function Dashboard() {
             >
               Sign out
             </LogoutLink> */}
-        <h2 className="text-xl text-center font-medium p-4">Widgets</h2>
-
-        <RightPanel />
       </div>
     </div>
   );
