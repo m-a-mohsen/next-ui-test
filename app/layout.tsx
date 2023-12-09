@@ -35,14 +35,14 @@ export default function RootLayout({
       <body
         className={clsx(
           "min-h-screen bg-background font-sans antialiased",
-          fontSans.variable
+          fontSans.variable,
         )}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
-          <div className="relative flex flex-col h-screen">
+          <div className="relative flex flex-col ">
             <Navbar />
-            <main className="flex grow h-screen">{children}</main>
-            <footer className="w-full flex items-center justify-center py-3">
+            <main className="flex grow">{children}</main>
+            <footer className="flex w-full items-center justify-center py-3">
               <span className="text-default-600">
                 ©2023 Open Tech Camp. Made with 💙 in Berlin. By&nbsp;
               </span>

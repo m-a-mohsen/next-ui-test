@@ -6,11 +6,12 @@ import RightPanel from "./components/ui/rightPanel";
 import LearningPoints from "./components/charts/learningpoints";
 import EngagementPoints from "./components/charts/engagementpoints";
 import MotivationPoints from "./components/charts/motivationpoints";
+import PointsProgress from "./components/charts/pointsprogress";
 
 export default function Dashboard() {
   return (
     // <div className="absolute z-20 top-20 inset-x-0 flex justify-center overflow-hidden pointer-events-none">
-    <div className="container mx-auto flex h-screen max-w-7xl px-6">
+    <div className="container mx-auto flex max-w-7xl px-6 border-2">
       <div id="leftPanel" className=" basis-1/5  ">
         <h2 className="p-4 text-center text-xl font-medium">Achievements</h2>
         <LeftPanel />
@@ -21,6 +22,10 @@ export default function Dashboard() {
           <LearningPoints />
           <EngagementPoints />
           <MotivationPoints />
+        </div>
+        <div className="my-10 px-4">
+
+        <PointsProgress />
         </div>
       </div>
       <div id="rightPanel" className="basis-1/5 flex-col ">
