@@ -42,7 +42,7 @@ export default function UserNavbar() {
         />
       );
   return (
-    <Navbar className="mb-2 rounded-2xl" isBlurred={true}>
+    <Navbar className=" rounded-2xl" isBlurred={true}  >
       <NavbarContent justify="start">
         <NavbarContent className="hidden gap-3 sm:flex">
           <NavbarItem isActive>
@@ -88,7 +88,7 @@ export default function UserNavbar() {
               isBordered
               as="button"
               className="transition-transform"
-              color="secondary"
+              color="primary"
               name="Jason Hughes"
               size="sm"
               src="https://avatars.githubusercontent.com/u/52429360?v=4&s=150"

@@ -59,10 +59,10 @@ export default function RightPanel() {
       />
       <User
         className="pb-2"
-        name="Prince Li"
+        name="Prince Jan"
         description={
           <Link href="https://github.com/m-a-mohsen" size="sm" isExternal>
-            @princedope
+            @jandope
           </Link>
         }
         avatarProps={{
@@ -74,7 +74,7 @@ export default function RightPanel() {
         name="Phillip Robbins"
         description={
           <Link href="https://github.com/m-a-mohsen" size="sm" isExternal>
-            @phillip-G
+            @phillip-g
           </Link>
         }
         avatarProps={{
@@ -98,7 +98,7 @@ export default function RightPanel() {
         name="Jana Blair"
         description={
           <Link href="https://github.com/m-a-mohsen" size="sm" isExternal>
-            @Janadev
+            @janabash
           </Link>
         }
         avatarProps={{
