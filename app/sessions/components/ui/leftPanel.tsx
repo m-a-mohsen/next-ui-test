@@ -6,121 +6,240 @@ import {
   Link,
   Card,
   CardBody,
-  User,Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, getKeyValue
+  Divider,
+  User,
+  Table,
+  TableHeader,
+  TableColumn,
+  TableBody,
+  TableRow,
+  TableCell,
+  getKeyValue,
+  Select,
+  SelectItem,
+  Chip,
+  Checkbox,
 } from "@nextui-org/react";
 
 export default function LeftPanel() {
   const defaultContent =
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
-//-----------------My Awards-----------------
- 
+  //-----------------Quick Access-----------------
 
-  
- 
-    
-    const rows = [
-      {
-        key: "1",
-        name: "Top Learner",
-        when: "10.10.23",
-      },
-      {
-        key: "2",
-        name: "Top Challenger",
-        when: "11.11.23",
-      },
-      {
-        key: "3",
-        name: "JS Master",
-        when: "20.11.23",
-      },
-      {
-        key: "4",
-        name: "Solid Vaper",
-        when: "12.12.23",
+  const quickAccess = (
+    <>
+      <div className="flex  items-center ">
+        <Button color="default" variant="light" size="sm">
+          Prev
+        </Button>
+        <Button color="primary" variant="ghost" size="sm">
+          Today
+        </Button>
+        <Button color="default" variant="light" size="sm">
+          Next
+        </Button>
+      </div>
+      <Divider className="my-2" />
+      <ul className="list-inside list-disc pb-2 ">
+        <li>
+          <Link> Express Basics </Link>
+        </li>
+        <li>
+          <Link> Express Advanced </Link>
+        </li>
+      </ul>
+    </>
+  );
 
-      },
-    ];
-    
-    const columns = [
-      {
-        key: "name",
-        label: "What",
-      },
-      {
-        key: "when",
-        label: "When",
-      },
+  //-----------------Filters-----------------
 
-    ];
-    
-    const myAwards = (
-        <Table isCompact  removeWrapper radius="none" shadow="none" isStriped layout="auto" className="pb-4">
-          <TableHeader columns={columns}>
-            {(column) => <TableColumn key={column.key}>{column.label}</TableColumn>}
-          </TableHeader>
-          <TableBody items={rows}>
-            {(item) => (
-              <TableRow data-hover key={item.key}>
-                {(columnKey) => <TableCell>{getKeyValue(item, columnKey)}</TableCell>}
-              </TableRow>
-            )}
-          </TableBody>
-        </Table>
-      );
+  const filters = (
+    <div className="flex flex-col gap-2">
+      {/* <p>By Topic:</p> */}
+      <Select
+        label="By Topic:"
+        className=" "
+        size="md"
+        labelPlacement="outside"
+        placeholder="Select Topic"
+      >
+        <SelectItem key="1" value="HTML">
+          HTML
+        </SelectItem>
+        <SelectItem key="2" value="CSS">
+          CSS
+        </SelectItem>
+        <SelectItem key="3" value="JavaScript">
+          JavaScript
+        </SelectItem>
+        <SelectItem key="4" value="Typescript">
+          Typescript
+        </SelectItem>
+      </Select>
 
-//-----------------My Awards-----------------
+      {/* <p>By Phase:</p> */}
+      <Select
+        label="By Phase:"
+        className=" "
+        size="md"
+        labelPlacement="outside"
+        placeholder="Select Phase"
+      >
+        <SelectItem key="1" value="Current Phase">
+          Current Phase
+        </SelectItem>
+        <SelectItem key="2" value="Phase 1">
+          Phase 1
+        </SelectItem>
+        <SelectItem key="3" value="Phase 2">
+          Phase 2
+        </SelectItem>
+        <SelectItem key="4" value="Phase 3">
+          Phase 3
+        </SelectItem>
+        <SelectItem key="5" value="Phase 4">
+          Phase 4
+        </SelectItem>
+      </Select>
+      {/* <p>By Week:</p> */}
+      <Select
+        label="By Week:"
+        className=" "
+        size="md"
+        labelPlacement="outside"
+        placeholder="Select week"
+      >
+        <SelectItem key="1" value="Current Week">
+          Current Week
+        </SelectItem>
+        <SelectItem key="2" value="Week 1">
+          Week 1
+        </SelectItem>
+        <SelectItem key="3" value="Week 2">
+          Week 2
+        </SelectItem>
+        <SelectItem key="4" value="Week 3">
+          Week 3
+        </SelectItem>
+        <SelectItem key="5" value="Week 4">
+          Week 4
+        </SelectItem>
+      </Select>
+      {/* //-------------------------------By Tag--------------------------------- */}
+      <Select
+        label="By Tags:"
+        isMultiline={true}
+        selectionMode="multiple"
+        className=" "
+        size="md"
+        labelPlacement="outside"
+        placeholder="Select tags"
+      >
+        <SelectItem key="1" value="Week 1">
+          Fundamental
+        </SelectItem>
+        <SelectItem key="2" value="Week 2">
+          Important
+        </SelectItem>
+        <SelectItem key="3" value="Week 3">
+          Advanced
+        </SelectItem>
+        <SelectItem key="4" value="Week 4">
+          New Tech
+        </SelectItem>
+      </Select>
+      <Divider className="my-2" />
+      {/* //-------------------------------Check Boxes--------------------------------- */}
+      <div className="flex flex-col gap-2">
+        <Checkbox color="primary" size="sm">
+          Recommended
+        </Checkbox>
+        <Checkbox color="danger" size="sm">
+          Marked Struggling
+        </Checkbox>
+      </div>
+      <Divider className="my-2" />
+      <Select
+        label="By Level of Understanding:"
+        className=" "
+        size="md"
+        labelPlacement="outside"
+        placeholder="Select Level"
+      >
+        <SelectItem key="1" value="Basic">
+          Basic
+        </SelectItem>
+        <SelectItem key="2" value="Intermediate">
+          Intermediate
+        </SelectItem>
+        <SelectItem key="3" value="Master">
+          Master
+        </SelectItem>
+      </Select>
+      <Divider className="my-2" />
 
-  const leaderBoard = (
-    <ul className="pb-2">
-      <li className="flex items-center justify-between pb-2">
-        <User
-          className=""
-          name="Jane Doe"
-          description="1842 pts"
-          avatarProps={{
-            src: "https://i.pravatar.cc/150?u=a04258114e29026702d",
-          }}
-        />
-        <h3 className="text-lg font-extralight">#1</h3>
+      <div className="flex justify-around pb-2">
+        <Button color="default" variant="light" size="sm">
+          reset
+        </Button>
+        <Button color="primary" variant="ghost" size="sm">
+          Apply
+        </Button>
+      </div>
+    </div>
+  );
+  //-------------------------------Sessions---------------------------------
+  const sessions = (
+    <ul className="list-inside list-disc pb-2 ">
+      <li>
+        <Link> Tailwind Basics </Link>
       </li>
-      <li className="flex items-center justify-between pb-2">
-        <User
-          className=""
-          name="Pablo Bennett"
-          description="1501 pts"
-          avatarProps={{
-            src: "https://i.pravatar.cc/150?img=15",
-          }}
-        />
-        <h3 className="text-lg font-extralight">#2</h3>
+      <li>
+        <Link> UI Component Libraries </Link>
       </li>
-      <li className="flex items-center justify-between">
-        <User
-          className=""
-          name="Elsa Shaw"
-          description="501 pts"
-          avatarProps={{
-            src: "https://i.pravatar.cc/150?img=9",
-          }}
-        />
-        <h3 className="text-lg font-extralight">#3</h3>
+      <li>
+        <Link> Drizzle Basics </Link>
+      </li>
+      <li>
+        <Link> SQL (Neon) </Link>
       </li>
     </ul>
   );
+  //-------------------------------Sessions---------------------------------
+  const references = (
+    <ul className="list-inside list-disc pb-2 ">
+      <li>
+        <Link> Installation </Link>
+      </li>
+      <li>
+        <Link> Github Advanced </Link>
+      </li>
 
-
+    </ul>
+  );
   return (
-    <Accordion variant="splitted" selectionMode="multiple" isCompact>
-      <AccordionItem
-        key="1"
-        aria-label="My Awards"
-        title="My Awards"
-      >
-        {myAwards}
+    <Accordion
+      variant="splitted"
+      selectionMode="multiple"
+      isCompact
+      defaultExpandedKeys={["1"]}
+    >
+      <AccordionItem key="1" aria-label="Quick Access" title="Quick Access">
+        {quickAccess}
       </AccordionItem>
-      <AccordionItem key="2" aria-label="Leader board" title="Leader Board">
-        {leaderBoard}
+      <AccordionItem key="2" aria-label="Filter & Sort" title="Filter & Sort">
+        {filters}
+      </AccordionItem>
+      <AccordionItem key="3" aria-label="Sessions" title="All Sessions">
+        {sessions}
+      </AccordionItem>
+      <AccordionItem key="4" aria-label="To Study" title="To Study">
+        <p className="pb-2 text-center text-sm font-light">
+          You have nothing to study today, Go home :){" "}
+        </p>
+      </AccordionItem>
+      <AccordionItem key="5" aria-label="My References " title="My References">
+        {references}
       </AccordionItem>
     </Accordion>
   );
