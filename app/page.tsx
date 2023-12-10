@@ -13,7 +13,7 @@ import {
 
 export default function Home() {
   return (
-      <section className="flex flex-col grow items-center justify-center gap-4 py-8 md:py-10">
+      <section className="flex flex-col grow items-center justify-center gap-4 py-8 md:py-10  ">
         <div className="inline-block max-w-lg text-center justify-center ">
           <h1 className={title()}>Deliver&nbsp;</h1>
           <h1 className={title({ color: "blue" })}>personalized&nbsp;</h1>
@@ -48,7 +48,7 @@ export default function Home() {
         </div>
         <div className="mt-8">
           <Snippet variant="bordered" size="sm">
-            npm install open-tech-camp
+            npx open-tech-camp
           </Snippet>
         </div>
       </section>
