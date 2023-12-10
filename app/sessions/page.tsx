@@ -1,16 +1,8 @@
-import { button as buttonStyles } from "@nextui-org/theme";
-import { Divider } from "@nextui-org/react";
-import { LogoutLink } from "@kinde-oss/kinde-auth-nextjs/components";
-import TremorShell from "./components/charts/TremorMetrics";
 import LeftPanel from "./components/ui/leftPanel";
 import RightPanel from "./components/ui/rightPanel";
-import LearningPoints from "./components/charts/learningpoints";
-import EngagementPoints from "./components/charts/engagementpoints";
-import MotivationPoints from "./components/charts/motivationpoints";
-import PointsProgress from "./components/charts/pointsprogress";
 import UserNavbar from "./components/ui/usernavbar";
-import Tabs from "./components/ui/tabs";
 import TabsNav from "./components/ui/tabs";
+import Test from "./mdx/Test.mdx";
 
 export default function Sessions() {
   return (
@@ -22,14 +14,16 @@ export default function Sessions() {
       </div>
       <div id="centerPanel" className="flex-grow">
         <UserNavbar />
-        <div className="flex justify-center mb-4">
+        <div className="mb-4 flex justify-center">
           <TabsNav />
         </div>
-  
+
         <div className="flex flex-col px-4">
-
+              <div className="prose dark:prose-invert mx-auto  ">
+            <Test />
+          </div>
+          {/* <Test className="prose prose-img:rounded-xl prose-headings:text-blue-600 prose-headings:font-2xl prose-a:text-blue-600 prose-headings:m-0" /> */}
         </div>
-
       </div>
       <div id="rightPanel" className="basis-1/5 ">
         <h2 className="p-4 text-center ">Widgets</h2>
