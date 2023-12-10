@@ -12,7 +12,7 @@ export default function TabsNav() {
         aria-label="Tabs variants"
         // selectedKey="Weekly"
       >
-        <Tab key="Handouts" title="Handouts" />
+        <Tab key="Handouts" title="Handout" />
         <Tab key="Challenges" title="Challenges" />
         <Tab key="Quizzes" title="Quizzes" />
         <Tab key="Notes" title="My Notes" />

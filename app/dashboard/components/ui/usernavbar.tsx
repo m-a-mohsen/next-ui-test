@@ -12,8 +12,8 @@ import {
   DropdownTrigger,
   Dropdown,
   DropdownMenu,
-    Avatar,
-    Kbd,
+  Avatar,
+     Kbd,
 } from "@nextui-org/react";
 
 import { SearchIcon } from "../../../../components/icons";

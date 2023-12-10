@@ -44,9 +44,12 @@ export default function RootLayout({
             <main className="flex grow">{children}</main>
             <footer className="flex w-full items-center justify-center py-3">
               <span className="text-default-600">
-                ©2023 Open Tech Camp. Made with 💙 in Berlin. By&nbsp;
+                ©2023 Open Tech Camp. Made with 💙 in Berlin, by&nbsp;
               </span>
               <p className="text-primary">m-a-mohsen</p>
+              <span className="text-default-600">
+                .
+              </span>
             </footer>
           </div>
         </Providers>

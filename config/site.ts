@@ -9,10 +9,10 @@ export const siteConfig = {
       label: "Home",
       href: "/",
     },
-    {
-      label: "Docs",
-      href: "/docs",
-    },
+    // {
+    //   label: "Docs",
+    //   href: "/docs",
+    // },
     // {
     //   label: "Pricing",
     //   href: "/pricing",
@@ -29,7 +29,7 @@ export const siteConfig = {
   navMenuItems: [
     {
       label: "Profile",
-      href: "/profile",
+      href: "/",
     },
     {
       label: "Dashboard",
@@ -37,31 +37,31 @@ export const siteConfig = {
     },
     {
       label: "Projects",
-      href: "/projects",
+      href: "/",
     },
-    {
-      label: "Team",
-      href: "/team",
-    },
-    {
-      label: "Calendar",
-      href: "/calendar",
-    },
+    // {
+    //   label: "Team",
+    //   href: "/team",
+    // },
+    // {
+    //   label: "Calendar",
+    //   href: "/calendar",
+    // },
     {
       label: "Settings",
-      href: "/settings",
+      href: "/",
     },
     {
       label: "Help & Feedback",
-      href: "/help-feedback",
+      href: "/",
     },
     {
       label: "Logout",
-      href: "/logout",
+      href: "/api/auth/logout",
     },
   ],
   links: {
-    github: "",
+    github: "https://github.com/m-a-mohsen",
     twitter: "",
     docs: "",
     discord: "",
