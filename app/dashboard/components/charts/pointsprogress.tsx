@@ -3,52 +3,58 @@ import { AreaChart, Title } from "@tremor/react";
 import { Card, CardBody } from "@nextui-org/react";
 const chartdata = [
   {
-    date: "Jan 22",
-    SemiAnalysis: 2890,
-    "The Pragmatic Engineer": 2338,
+    date: "week 1",
+    Learning: 2890,
+    Motivation: 2338,
+    Engagement: 3800,
   },
   {
-    date: "Feb 22",
-    SemiAnalysis: 2756,
-    "The Pragmatic Engineer": 2103,
+    date: "week 2",
+    Learning: 2756,
+    Motivation: 2103,
+    Engagement: 3567,
   },
   {
-    date: "Mar 22",
-    SemiAnalysis: 3322,
-    "The Pragmatic Engineer": 2194,
+    date: "week 3",
+    Learning: 3322,
+    Motivation: 2194,
+    Engagement: 3244,
   },
   {
-    date: "Apr 22",
-    SemiAnalysis: 3470,
-    "The Pragmatic Engineer": 2108,
+    date: "week 4",
+    Learning: 3470,
+    Motivation: 2108,
+    Engagement: 4522,
   },
   {
-    date: "May 22",
-    SemiAnalysis: 3475,
-    "The Pragmatic Engineer": 1812,
+    date: "week 5",
+    Learning: 3475,
+    Motivation: 1812,
+    Engagement: 4322,
   },
   {
-    date: "Jun 22",
-    SemiAnalysis: 3129,
-    "The Pragmatic Engineer": 1726,
+    date: "week 6",
+    Learning: 3129,
+    Motivation: 1726,
+    Engagement: 3456,
   },
 ];
 
 const valueFormatter = function (number: number) {
-  return "$ " + new Intl.NumberFormat("us").format(number).toString();
+  return "pt " + new Intl.NumberFormat("us").format(number).toString();
 };
 
 export default function PointsProgress() {
   return (
     <Card>
       <CardBody>
-        <Title>Newsletter revenue over time (USD)</Title>
+        <Title>Preformance over time (Points)</Title>
         <AreaChart
           className="mt-4 h-72"
           data={chartdata}
           index="date"
-          categories={["SemiAnalysis", "The Pragmatic Engineer"]}
-          colors={["indigo", "cyan"]}
+          categories={["Learning", "Engagement", "Motivation"]}
+          colors={["cyan", "indigo", "orange"]}
           valueFormatter={valueFormatter}
         />
       </CardBody>

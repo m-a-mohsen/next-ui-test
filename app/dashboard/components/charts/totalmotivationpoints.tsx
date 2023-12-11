@@ -9,15 +9,20 @@ import {
   BadgeDelta,
 } from "@tremor/react";
 import { Card, CardBody } from "@nextui-org/react";
-export default function MotivationPoints() {
+import { useState } from "react";
+export default function TotalMotivationPoints() {
+    const [circleValue, setCircleValue] = useState(0);
+    setTimeout(() => {
+      setCircleValue(75);
+    }, 300);
   const motivation = [
-    { name: "Attendance", value: 130 },
-    { name: "Research", value: 51 },
-    { name: "Vaping", value: 100 },
+    { name: "Attendance", value: 3130 },
+    { name: "Research", value: 1451 },
+    { name: "Vaping", value: 773 },
   ];
   const item = {
     category: "Motivation",
-    stat: "281",
+    stat: "6,534",
     data: motivation,
   };
 
@@ -29,13 +34,13 @@ export default function MotivationPoints() {
       <CardBody>
         <Title>Motivation</Title>
         <Flex justifyContent="between" alignItems="center">
-          <Text>from last week</Text>
+          <Text>vs. target</Text>
           <BadgeDelta
-            deltaType="moderateDecrease"
+            deltaType="unchanged"
             isIncreasePositive={true}
             size="xs"
           >
-            -3%
+            0%
           </BadgeDelta>
         </Flex>
         <br />
@@ -49,12 +54,7 @@ export default function MotivationPoints() {
           <Text>Total views</Text>
         </Flex> */}
 
-        <ProgressCircle
-          value={10}
-          radius={80}
-          strokeWidth={10}
-          tooltip="radius: 50, strokeWidth: 8"
-        >
+        <ProgressCircle value={circleValue} radius={80} strokeWidth={10}>
           <Flex justifyContent="center" alignItems="center" flexDirection="col">
             <Metric>{item.stat}</Metric>
             <Text>Total points</Text>
