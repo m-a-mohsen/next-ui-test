@@ -155,7 +155,7 @@ export default function LeftPanel() {
           Recommended
         </Checkbox>
         <Checkbox color="danger" size="sm">
-          Marked Struggling
+          Struggle
         </Checkbox>
       </div>
       <Divider className="my-2" />
@@ -172,8 +172,8 @@ export default function LeftPanel() {
         <SelectItem key="2" value="Intermediate">
           Intermediate
         </SelectItem>
-        <SelectItem key="3" value="Master">
-          Master
+        <SelectItem key="3" value="Expert">
+          Expert 😎
         </SelectItem>
       </Select>
       <Divider className="my-2" />
@@ -230,7 +230,7 @@ export default function LeftPanel() {
       <AccordionItem key="2" aria-label="Filter & Sort" title="Filter & Sort">
         {filters}
       </AccordionItem>
-      <AccordionItem key="3" aria-label="Sessions" title="All Sessions">
+      <AccordionItem key="3" aria-label="Sessions" title="Sessions">
         {sessions}
       </AccordionItem>
       <AccordionItem key="4" aria-label="To Study" title="To Study">

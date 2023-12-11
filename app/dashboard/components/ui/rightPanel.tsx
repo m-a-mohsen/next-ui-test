@@ -110,7 +110,7 @@ export default function RightPanel() {
       
  
 
-//-------------------------------------------
+//------------------- instructors------------------------
 
   const instructors = (
     <div className="pb-2">
