@@ -1,0 +1,90 @@
+# Quizzes: Express Basics
+### 1. **What is the purpose of the `express.json()` middleware?**
+
+<details>
+<summary>Show Answer</summary>
+
+The `express.json()` middleware is used to parse incoming requests with JSON payloads. It is based on body-parser.
+
+</details>
+
+### 2. **What is the difference between `app.use()` and `app.get()` in Express.js?**
+
+<details>
+<summary>Show Answer</summary>
+
+`app.use()` is used to mount the specified middleware function or functions at the specified path. It is executed every time the app receives a request. `app.get()` is used to route HTTP GET requests to the specified path with the specified callback functions.
+
+</details>
+
+### 3. **How can you enable CORS in Express.js?**
+
+<details>
+<summary>Show Answer</summary>
+
+You can enable CORS in Express.js by using the `cors` middleware. You can install it using npm and then use `app.use(cors())` to enable it.
+
+</details>
+
+### 4. **How can you handle file uploads in Express.js?**
+
+<details>
+<summary>Show Answer</summary>
+
+Express.js doesn't have built-in support for handling file uploads. You can use middleware like `multer` for this purpose.
+
+</details>
+
+### 5. **How can you use cookies in Express.js?**
+
+<details>
+<summary>Show Answer</summary>
+
+Express.js uses middleware to handle cookies. You can use the `cookie-parser` middleware for this purpose.
+
+</details>
+
+### 6. **How can you create a REST API with Express.js?**
+
+<details>
+<summary>Show Answer</summary>
+
+You can create a REST API with Express.js by defining routes that correspond to the HTTP methods (GET, POST, PUT, DELETE) and returning JSON data from these routes.
+
+</details>
+
+### 7. **How can you authenticate users in Express.js?**
+
+<details>
+<summary>Show Answer</summary>
+
+Express.js doesn't have built-in user authentication. You can use middleware like `passport.js` for this purpose.
+
+</details>
+
+### 8. **How can you use sessions in Express.js?**
+
+<details>
+<summary>Show Answer</summary>
+
+Express.js uses middleware to handle sessions. You can use the `express-session` middleware for this purpose.
+
+</details>
+
+### 9. **How can you handle CORS in Express.js?**
+
+<details>
+<summary>Show Answer</summary>
+
+Express.js uses middleware to handle CORS. You can use the `cors` middleware for this purpose.
+
+</details>
+
+### 10. **How can you use WebSocket with Express.js?**
+
+<details>
+<summary>Show Answer</summary>
+
+Express.js doesn't have built-in WebSocket support. You can use libraries like `socket.io` for this purpose.
+
+</details>
