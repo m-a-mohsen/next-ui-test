@@ -1,0 +1,31 @@
+# FAQ: Express Basics
+
+## 1. **What is Express.js?**
+   Express.js is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.
+
+## 2. **How do I install Express.js?**
+   You can install Express.js by using npm (Node Package Manager) with the command `npm install express`.
+
+## 3. **What is middleware in Express.js?**
+   Middleware functions are functions that have access to the request object (req), the response object (res), and the next middleware function in the application’s request-response cycle.
+
+## 4. **How do I serve static files in Express.js?**
+   Express.js provides a built-in middleware function `express.static` to serve static files. You can use it like this: `app.use(express.static('public'))`.
+
+## 5. **How do I handle errors in Express.js?**
+   Express.js error handling is done through middleware. You define error-handling middleware last, after other `app.use()` and routes calls.
+
+## 6. **How do I use routing in Express.js?**
+   Routing refers to how an application’s endpoints (URIs) respond to client requests. You define routing using methods of the Express app object that correspond to HTTP methods.
+
+## 7. **What is the use of the Express.js `app.set()` method?**
+   The `app.set()` method is used to assign 'name' to 'value' in the application settings, where 'name' is one of the strings in the app settings table.
+
+## 8. **How do I use template engines with Express.js?**
+   A template engine enables you to use static template files in your application. At runtime, the template engine replaces variables in a template file with actual values.
+
+## 9. **How do I handle form data in Express.js?**
+   Express.js itself doesn't handle reading data from the `<form>` element. You would need to use a middleware like `body-parser`.
+
+## 10. **How do I connect to a database in Express.js?**
+    Express.js doesn't provide a built-in database integration but you can easily connect to databases like MongoDB, MySQL, PostgreSQL using appropriate Node.js drivers or ORMs.
