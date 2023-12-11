@@ -154,7 +154,12 @@ export default function RightPanel() {
   );
 
   return (
-    <Accordion variant="splitted" selectionMode="multiple" isCompact>
+    <Accordion
+      variant="splitted"
+      selectionMode="multiple"
+      isCompact
+      defaultExpandedKeys={["1"]}
+    >
       <AccordionItem key="1" aria-label="My Awards" title="Co-Students">
         {coStudents}
       </AccordionItem>

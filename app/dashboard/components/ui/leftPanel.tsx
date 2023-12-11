@@ -111,12 +111,13 @@ export default function LeftPanel() {
 
 
   return (
-    <Accordion variant="splitted" selectionMode="multiple" isCompact>
-      <AccordionItem
-        key="1"
-        aria-label="My Awards"
-        title="My Awards"
-      >
+    <Accordion
+      variant="splitted"
+      selectionMode="multiple"
+      isCompact
+      defaultExpandedKeys={["1"]}
+    >
+      <AccordionItem key="1" aria-label="My Awards" title="My Awards">
         {myAwards}
       </AccordionItem>
       <AccordionItem key="2" aria-label="Leader board" title="Leader Board">

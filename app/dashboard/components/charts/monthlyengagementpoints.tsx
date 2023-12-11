@@ -9,15 +9,20 @@ import {
   BadgeDelta,
 } from "@tremor/react";
 import { Card, CardBody } from "@nextui-org/react";
-export default function EngagementPoints() {
+import { useState } from "react";
+export default function MonthlyEngagementPoints() {
+  const [circleValue, setCircleValue] = useState(0);
+  setTimeout(() => {
+    setCircleValue(30);
+  }, 200);
   const engagement = [
-    { name: "Slack", value: 220 },
-    { name: "PR reviews", value: 757 },
-    { name: "Questions", value: 970 },
+    { name: "Slack", value: 820 },
+    { name: "PR reviews", value: 2757 },
+    { name: "Questions", value: 1970 },
   ];
   const item = {
     category: "Website",
-    stat: "1,947",
+    stat: "5,674",
     data: engagement,
   };
 
@@ -29,9 +34,9 @@ export default function EngagementPoints() {
       <CardBody>
         <Title>Engagement</Title>
         <Flex justifyContent="between" alignItems="center">
-          <Text>from last week</Text>
-          <BadgeDelta deltaType="unchanged" isIncreasePositive={false} size="xs">
-            0%
+          <Text>from last month</Text>
+          <BadgeDelta deltaType="decrease" isIncreasePositive={true} size="xs">
+            -10%
           </BadgeDelta>
         </Flex>
         <br />
@@ -46,10 +51,10 @@ export default function EngagementPoints() {
         </Flex> */}
 
         <ProgressCircle
-          value={50}
+          value={circleValue}
           radius={80}
           strokeWidth={10}
-          tooltip="radius: 50, strokeWidth: 8"
+          showAnimation
         >
           <Flex justifyContent="center" alignItems="center" flexDirection="col">
             <Metric>{item.stat}</Metric>
