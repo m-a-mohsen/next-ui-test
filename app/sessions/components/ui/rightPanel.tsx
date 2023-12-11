@@ -204,6 +204,10 @@ export default function RightPanel() {
   //------------------My session Controls-------------------------
   const sessionControls = (
     <div className="flex flex-col gap-2">
+      <p className="text-sm font-medium">
+        Title :{" "}
+        <span className="font-normal text-primary"> Express Basics</span>
+      </p>
       {/* //-------------------------------Check Boxes--------------------------------- */}
       <div className="flex flex-col gap-2">
         <Checkbox color="primary" size="sm">
@@ -236,7 +240,6 @@ export default function RightPanel() {
         </SelectItem>
       </Select>
 
-      {/* <p>By Phase:</p> */}
       <Select
         label="Spaced Repetition :"
         className=" "
@@ -260,20 +263,25 @@ export default function RightPanel() {
           5th Cycle
         </SelectItem> */}
       </Select>
-{/* ----------- Button ------------ */}
+      {/* ----------- Button ------------ */}
       <div className="flex justify-around p-2">
-
         <Button color="primary" variant="ghost" size="sm">
           Update
         </Button>
       </div>
     </div>
   );
-//------------------Session Feedback-------------------------
+  //------------------Session Feedback-------------------------
   const sessionFeedback = (
-    <div>
+    <div className="flex flex-col gap-2 pb-2 text-sm">
+      <p className="font-medium">
+        Title :{" "}
+        <span className="font-normal text-primary"> Express Basics</span>
+      </p>
       <Slider
+        className="px-3"
         size="sm"
+        color="warning"
         label="Overall Satisfaction"
         hideValue={true}
         showTooltip={false}
@@ -281,10 +289,10 @@ export default function RightPanel() {
         // formatOptions={{ style: "percent" }}
         maxValue={1}
         minValue={0}
+        disableThumbScale={true}
         classNames={{
-          base: "max-w-md gap-3",
-          filler:
-            "bg-gradient-to-r from-red-300 to-green-500 dark:from-red-300 dark:to-green-600",
+          // base: "max-w-md gap-3",
+          filler: "bg-gradient-to-r from-warning to-success ",
         }}
         marks={[
           {
@@ -303,6 +311,126 @@ export default function RightPanel() {
         defaultValue={0.2}
         // className="flex "
       />
+      <Checkbox color="primary" size="sm">
+        Have Previous Experience
+      </Checkbox>
+      <Divider className="my-2" />{" "}
+      {/* -------------------------------content Feedback--------------------------------- */}
+      <Slider
+        className="px-3"
+        size="sm"
+        color="warning"
+        label="Content Quality"
+        hideValue={true}
+        showTooltip={false}
+        step={0.1}
+        // formatOptions={{ style: "percent" }}
+        maxValue={1}
+        minValue={0}
+        disableThumbScale={true}
+        classNames={{
+          // base: "max-w-md gap-3",
+          filler: "bg-gradient-to-r from-warning to-success ",
+        }}
+        marks={[
+          {
+            value: 0.2,
+            label: "👎",
+          },
+          {
+            value: 0.5,
+            label: "😐",
+          },
+          {
+            value: 0.8,
+            label: "👍",
+          },
+        ]}
+        defaultValue={0.6}
+        // className="flex "
+      />
+      <Slider
+        className="px-3"
+        size="sm"
+        color="success"
+        label="Content Amount"
+        hideValue={true}
+        showTooltip={false}
+        step={0.1}
+        // formatOptions={{ style: "percent" }}
+        maxValue={0.5}
+        minValue={-0.5}
+        fillOffset={0}
+        defaultValue={-0.1}
+        disableThumbScale={true}
+        classNames={{
+          // base: "max-w-md gap-3",
+          filler: "bg-gradient-to-r from-success to-danger ",
+        }}
+        marks={[
+          {
+            value: -0.3,
+            label: "😴",
+          },
+          {
+            value: 0,
+            label: "😶",
+          },
+          {
+            value: 0.3,
+            label: "🤕",
+          },
+        ]}
+
+        // className="flex "
+      />
+      <Slider
+        className="px-3"
+        size="sm"
+        color="success"
+        label="Content Difficulty"
+        hideValue={true}
+        showTooltip={false}
+        step={0.1}
+        // formatOptions={{ style: "percent" }}
+        maxValue={0.5}
+        minValue={-0.5}
+        fillOffset={0}
+        defaultValue={0.1}
+        disableThumbScale={true}
+        classNames={{
+          // base: "max-w-md gap-3",
+          filler: "bg-gradient-to-r from-success to-danger ",
+        }}
+        marks={[
+          {
+            value: -0.3,
+            label: "🥱",
+          },
+          {
+            value: 0,
+            label: "😶",
+          },
+          {
+            value: 0.3,
+            label: "🥵",
+          },
+        ]}
+
+        // className="flex "
+      />
+      <Checkbox color="primary" size="sm">
+        Content has Mistakes
+      </Checkbox>
+      <Checkbox color="primary" size="sm">
+        Content is Outdated
+      </Checkbox>
+      <Divider className="my-2" />
+      <div className="flex justify-around ">
+        <Button color="primary" variant="ghost" size="sm">
+          Submit
+        </Button>
+      </div>
     </div>
   );
 
