@@ -9,34 +9,36 @@ import {
   BadgeDelta,
 } from "@tremor/react";
 import { Card, CardBody } from "@nextui-org/react";
-export default function LearningPoints() {
+import { useState } from "react";
+export default function TotalLearningPoints() {
+  const [circleValue, setCircleValue] = useState(0)
+  setTimeout(() => { setCircleValue(55) }, 100)
   const learning = [
-    { name: "Studying", value: 1530 },
-    { name: "Challenges", value: 751 },
-    { name: "Quizzes", value: 471 },
+    { name: "Studying", value: 15530 },
+    { name: "Challenges", value: 3751 },
+    { name: "Quizzes", value: 8471 },
 
   ];
   const item = {
     category: "Website",
-    stat: "2,752",
+    stat: "27,526",
     data: learning,
   };
 
   const valueFormatter = (number: number) =>
     `${Intl.NumberFormat("us").format(number).toString()}`;
-
   return (
     <Card>
       <CardBody>
         <Title>Learning </Title>
         <Flex justifyContent="between" alignItems="center">
-          <Text>from last week</Text>
+          <Text>vs. target</Text>
           <BadgeDelta
-            deltaType="increase"
+            deltaType="moderateIncrease"
             isIncreasePositive={true}
             size="xs"
           >
-            +12%
+            +9%
           </BadgeDelta>
               </Flex>
               <br/>
@@ -51,10 +53,10 @@ export default function LearningPoints() {
         </Flex> */}
 
         <ProgressCircle
-          value={90}
+          value={circleValue}
           radius={80}
           strokeWidth={10}
-          tooltip="radius: 50, strokeWidth: 8"
+          showAnimation
         >
           <Flex
             justifyContent="center"
