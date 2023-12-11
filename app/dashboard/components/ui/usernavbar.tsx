@@ -42,7 +42,7 @@ export default function UserNavbar() {
         />
       );
   return (
-    <Navbar className=" rounded-2xl" isBlurred={true}  >
+    <Navbar className=" rounded-2xl" isBlurred={true}>
       <NavbarContent justify="start">
         <NavbarContent className="hidden gap-3 sm:flex">
           <NavbarItem isActive>
@@ -60,7 +60,11 @@ export default function UserNavbar() {
             </Link>
           </NavbarItem>
           <NavbarItem>
-            <Link color="foreground" href="/spaced-repetition">
+            <Link
+              color="foreground"
+              href="https://shiken.ai/how-to-learn/spaced-repetition"
+              isExternal
+            >
               Spaced repetitions
             </Link>
           </NavbarItem>

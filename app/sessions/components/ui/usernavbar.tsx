@@ -61,7 +61,11 @@ export default function UserNavbar() {
             </Link>
           </NavbarItem>
           <NavbarItem>
-            <Link color="foreground" href="/spaced-repetition">
+            <Link
+              color="foreground"
+              href="https://shiken.ai/how-to-learn/spaced-repetition"
+              isExternal
+            >
               Spaced repetitions
             </Link>
           </NavbarItem>
