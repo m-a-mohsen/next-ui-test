@@ -1,4 +1,5 @@
 import "@/styles/globals.css";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Metadata } from "next";
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
@@ -39,7 +40,7 @@ export default function RootLayout({
         )}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
-          <div className="relative flex flex-col min-h-screen ">
+          <div className="relative flex min-h-screen flex-col ">
             <Navbar />
             <main className="flex grow">{children}</main>
             <footer className="flex w-full items-center justify-center py-3">
@@ -47,9 +48,7 @@ export default function RootLayout({
                 ©2023 Open Tech Camp. Made with 💙 in Berlin, by&nbsp;
               </span>
               <p className="text-primary">m-a-mohsen</p>
-              <span className="text-default-600">
-                .
-              </span>
+              <span className="text-default-600">.</span>
             </footer>
           </div>
         </Providers>
