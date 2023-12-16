@@ -53,7 +53,7 @@ Answer 2
 
 ## Contributing
 
-TODO: Update place holder
+TODO: Create contributing.md
 
 Contributions are always welcome!
 
