@@ -1,6 +1,6 @@
 # Open Tech Camp
-
-TODO: Update place holder
+>[!NOTE]
+>TODO: Update place holder
 
 it is an educational system for coding boot camps
 
