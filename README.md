@@ -1,6 +1,7 @@
 # Open Tech Camp
->[!NOTE]
->TODO: Update place holder
+
+> [!NOTE]
+> TODO: Update place holder
 
 it is an educational system for coding boot camps
 
@@ -11,6 +12,7 @@ it is an educational system for coding boot camps
 [![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)
 
 ## Tech Stack
+
 **Client:** Next(app router), TailwindCSS, Next UI,tremore
 
 **Backend:** Node, Kinde Auth, drizzel ORM, PostgreSQL
@@ -26,7 +28,6 @@ it is an educational system for coding boot camps
 	<img width="50" src="https://user-images.githubusercontent.com/25181517/117208740-bfb78400-adf5-11eb-97bb-09072b6bedfc.png" alt="PostgreSQL" title="PostgreSQL"/>
 	<img width="50" src="https://user-images.githubusercontent.com/25181517/192158606-7c2ef6bd-6e04-47cf-b5bc-da2797cb5bda.png" alt="bash" title="bash"/>
 </div>
-
 
 ## Screenshots
 
@@ -45,12 +46,13 @@ TODO: Update place holder
 
 ## Roadmap
 
->[!NOTE]
->TODO: Update place holder
+> [!NOTE]
+> TODO: Update place holder
 
-- Additional browser support
-
-- Add more integrations
+- [ ] Remote markdown (mdx-remote or content layer)
+- [ ] Database and ORM (Neon/Drizzle)
+- [ ] Documentation on docusaurus
+- [ ] Add integrations
 
 ## FAQ
 
