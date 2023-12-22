@@ -37,7 +37,8 @@ it is an educational system for coding boot camps
 
 ## Features
 
-TODO: Update place holder
+> [!NOTE]
+> TODO: Update place holder
 
 - Light/dark mode toggle
 - Live previews
