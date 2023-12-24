@@ -57,7 +57,8 @@ it is an educational system for coding boot camps
 
 ## FAQ
 
-TODO: Update place holder
+> [!NOTE]
+> TODO: Update place holder
 
 #### Question 1
 
